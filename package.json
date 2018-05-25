@@ -7,6 +7,7 @@
     "url": "https://github.com/wasimxprt/bakcbone-skeleton"
   },
   "devDependencies": {
+    "express": "^4.16.3",
     "grunt": "latest",
     "grunt-contrib-less": "latest",
     "grunt-contrib-requirejs": "latest",
