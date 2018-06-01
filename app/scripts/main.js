@@ -1,28 +1,64 @@
 require.config({
+
   paths: {
-    'jquery': 'vendor/jquery/dist/jquery',
-    'underscore': 'vendor/underscore/underscore',
-    'backbone': 'vendor/backbone/backbone',
-    'backbone.babysitter': 'vendor/backbone.babysitter/lib/backbone.babysitter.js',
-    'backbone.wreqr': 'vendor/backbone.wreqr/lib/backbone.wreqr.js',
-    'backbone.marionette': 'vendor/backbone.marionette/lib/core/backbone.marionette.js',
+    backbone: "vendor/backbone",
+    "backbone.picky": "vendor/backbone.picky",
+    "backbone.syphon": "vendor/backbone.syphon",
+    jquery: "vendor/jquery",
+    "jquery-ui": "vendor/jquery-ui",
+    json2: "vendor/json2",
+    localstorage: "vendor/backbone.localstorage",
+    marionette: "vendor/backbone.marionette",
+    spin: "vendor/spin",
+    "spin.jquery": "vendor/spin.jquery",
+    text: "vendor/text",
+    tpl: "vendor/underscore-tpl",
+    underscore: "vendor/underscore"
   },
   shim: {
     underscore: {
-      exports: '_'
+      exports: "_"
     },
     backbone: {
-      exports: 'Backbone',
-      deps: ['jquery', 'underscore']
+      deps: ["jquery", "underscore", "json2"],
+      exports: "Backbone"
     },
+    "backbone.picky": ["backbone"],
+    "backbone.syphon": ["backbone"],
     marionette: {
-      exports: 'Backbone.Marionette',
-      deps: ['backbone']
-    }
+      deps: ["backbone"],
+      exports: "Marionette"
+    },
+    "jquery-ui": ["jquery"],
+    localstorage: ["backbone"],
+    "spin.jquery": ["spin", "jquery"],
+    tpl: ["text"]
   },
+  // paths: {
+  //   'jquery': 'vendor/jquery/dist/jquery',
+  //   'underscore': 'vendor/underscore/underscore',
+  //   'backbone': 'vendor/backbone/backbone',
+  //   'backbone.babysitter': 'vendor/backbone.babysitter/lib/backbone.babysitter.js',
+  //   'backbone.wreqr': 'vendor/backbone.wreqr/lib/backbone.wreqr.js',
+  //   'marionette': 'vendor/marionette/backbone.marionette'
+  // },
+  // shim: {
+  //   underscore: {
+  //     exports: '_'
+  //   },
+  //   backbone: {
+  //     exports: 'Backbone',
+  //     deps: ['jquery', 'underscore']
+  //   },
+  //   marionette: {
+  //     exports: 'Marionette',
+  //     deps: ['backbone']
+  //   }
+  // },
   deps: ['jquery', 'underscore']
 });
 
-require(['views/app'], function(AppView) {
-  new AppView;
+
+require(["app"], function (DemoApp) {
+  DemoApp.start();
 });

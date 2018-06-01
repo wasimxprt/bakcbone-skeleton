@@ -6,10 +6,16 @@
     "type": "git",
     "url": "https://github.com/wasimxprt/bakcbone-skeleton"
   },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon --watch server.js"
+  },
   "devDependencies": {
+    "express": "^4.16.3",
     "grunt": "latest",
     "grunt-contrib-less": "latest",
     "grunt-contrib-requirejs": "latest",
-    "grunt-contrib-watch": "latest"
+    "grunt-contrib-watch": "latest",
+    "nodemon": "^1.17.5"
   }
 }
