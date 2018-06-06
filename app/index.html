@@ -7,12 +7,46 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="description" content="A simple kanban for multiple personal projects.">
   <meta name="viewport" content="width=device-width">
-  <link rel="stylesheet" media="screen" href="/styles/styles.css" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
+
+    <!-- Bootstrap Core Css -->
+    <link href="styles/bootstrap.css" rel="stylesheet">
+
+    <!-- Waves Effect Css -->
+    <link href="styles/waves.css" rel="stylesheet" />
+
+    <!-- Animation Css -->
+    <link href="styles/animate.css" rel="stylesheet" />
+
+    <!-- Custom Css -->
+    <link href="styles/style.css" rel="stylesheet">
+
+  <!-- <link rel="stylesheet" media="screen" href="/styles/styles.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
 </head>
 
-<body>
-  <div id="app-container">
+<body class="">
+
+  <div class="page-loader-wrapper">
+        <div class="loader">
+            <div class="preloader">
+                <div class="spinner-layer pl-red">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+            </div>
+            <p>Please wait...</p>
+        </div>
+    </div>
+
+  <!-- <div id="app-container">
     <div id="header-region">
       <nav class="navbar navbar-inverse">
         <div class="container-fluid">
@@ -34,13 +68,35 @@
       </nav>
     </div>
 
-    <div id="main-region">
+    
+
+
+  </div> -->
+
+  <div id="main-region">
 
     </div>
 
 
-  </div>
-  <script data-main="/scripts/main.js" src="/scripts/vendor/require.js"></script>
+    <!-- Jquery Core Js -->
+    <script src="scripts/vendor/jquery.min.js"></script>
+
+    <!-- Bootstrap Core Js -->
+    <script src="scripts/vendor/bootstrap.js"></script>
+
+    <!-- Waves Effect Plugin Js -->
+    <script src="scripts/vendor/waves.js"></script>
+
+    <!-- Validation Plugin Js -->
+    <script src="scripts/vendor/jquery.validate.js"></script>
+
+    <!-- Custom Js -->
+    <script src="scripts/vendor/admin.js"></script>
+    <script src="scripts/vendor/sign-in.js"></script>
+    <script data-main="/scripts/main.js" src="/scripts/vendor/require.js"></script>
+
+
+  
 </body>
 
 </html>

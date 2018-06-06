@@ -14,6 +14,8 @@ define([
                 ], function () {
                     DemoApp.RegisterApp.Register.Controller.showRegisterForm();
                 });
+
+                $('body').addClass('signup-page');
             }
         };
 

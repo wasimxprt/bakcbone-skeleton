@@ -19,11 +19,14 @@ define([
         var API = {
             showLoginForm: function () {
                 console.log('LoginApp --> showNotification');
+
                 require([
                     'modules/login/login_controller'
                 ], function () {
                     DemoApp.LoginApp.Login.Controller.showLoginForm();
                 });
+
+                $('body').addClass('login-page');
             }
         };
 

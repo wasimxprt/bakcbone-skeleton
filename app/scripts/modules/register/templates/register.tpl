@@ -1,20 +1,55 @@
-<div class="container">
-        <div class="card card-container">
-            <!-- <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" /> -->
-            <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
-            <p id="profile-name" class="profile-name-card"></p>
-            <form class="form-signin">
-                <span id="reauth-email" class="reauth-email"></span>
-                <input type="text" id="inputName" class="form-control" placeholder="Name" required autofocus>
-                <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-                
-                <button class="btn btn-lg btn-primary btn-block btn-signin" type="button" id="submitBtn">Sign up</button>
-            </form><!-- /form -->                        
-            
-            <span>Already a member ?</span>
-            <a href="#login" class="forgot-password">
-                Click Here
-            </a>
-        </div><!-- /card-container -->
-    </div><!-- /container -->
+<div class="signup-box">
+        <div class="logo">
+            <a href="javascript:void(0);"><b>Register</b></a>
+            <small>Backbone - Marionette App</small>
+        </div>
+        <div class="card">
+            <div class="body">
+                <form id="sign_up" method="POST">
+                    <div class="msg">Register a new membership</div>
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <i class="material-icons">person</i>
+                        </span>
+                        <div class="form-line">
+                            <input type="text" class="form-control" name="namesurname" placeholder="Name Surname" required autofocus>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <i class="material-icons">email</i>
+                        </span>
+                        <div class="form-line">
+                            <input type="email" class="form-control" name="email" placeholder="Email Address" required>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <i class="material-icons">lock</i>
+                        </span>
+                        <div class="form-line">
+                            <input type="password" class="form-control" name="password" minlength="6" placeholder="Password" required>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <i class="material-icons">lock</i>
+                        </span>
+                        <div class="form-line">
+                            <input type="password" class="form-control" name="confirm" minlength="6" placeholder="Confirm Password" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" name="terms" id="terms" class="filled-in chk-col-pink">
+                        <label for="terms">I read and agree to the <a href="javascript:void(0);">terms of usage</a>.</label>
+                    </div>
+
+                    <button class="btn btn-block btn-lg bg-pink waves-effect" type="submit">SIGN UP</button>
+
+                    <div class="m-t-25 m-b--5 align-center">
+                        <a href="#login">You already have a membership?</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
