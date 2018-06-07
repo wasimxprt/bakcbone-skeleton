@@ -14,6 +14,8 @@ define([
 	 */
     var DemoApp = new Marionette.Application();
 
+
+
     DemoApp.addRegions({
         header: "#header-region",
         mainRegion: '#main-region',
